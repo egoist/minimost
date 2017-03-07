@@ -1,6 +1,7 @@
 # minimost
 
-[![NPM version](https://img.shields.io/npm/v/minimost.svg?style=flat)](https://npmjs.com/package/minimost) [![NPM downloads](https://img.shields.io/npm/dm/minimost.svg?style=flat)](https://npmjs.com/package/minimost) [![Build Status](https://img.shields.io/circleci/project/egoist/minimost/master.svg?style=flat)](https://circleci.com/gh/egoist/minimost) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
+[![NPM version](https://img.shields.io/npm/v/minimost.svg?style=flat)](https://npmjs.com/package/minimost) [![NPM downloads](https://img.shields.io/npm/dm/minimost.svg?style=flat)](https://npmjs.com/package/minimost) [![Build Status](https://img.shields.io/circleci/project/egoist/minimost/master.svg?style=flat)](https://circleci.com/gh/egoist/minimost) [![codecov](https://codecov.io/gh/egoist/minimost/branch/master/graph/badge.svg)](https://codecov.io/gh/egoist/minimost)
+ [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
 ## Features
 
