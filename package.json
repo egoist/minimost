@@ -1,0 +1,42 @@
+{
+  "name": "minimost",
+  "version": "0.0.0",
+  "description": "Minimist but flags are converted to cameCase",
+  "repository": {
+    "url": "egoist/minimost",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test:cov": "jest --coverage && npm run lint",
+    "test": "jest && npm run lint",
+    "lint": "xo"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^18.1.0",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "extends": "rem",
+    "esnext": true,
+    "envs": [
+      "jest"
+    ]
+  },
+  "dependencies": {
+    "camelcase-keys": "^4.0.0",
+    "minimist": "^1.2.0"
+  }
+}
