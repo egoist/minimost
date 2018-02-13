@@ -5,7 +5,7 @@
 
 ## Features
 
-- Flags are converted to camelCase, eg: `--foo-bar foo` results in `{ fooBar: 'foo' }`
+- Flags in kebab-case are converted to camelCase, eg: `--foo-bar foo` results in `{ fooBar: 'foo' }`
 - Preserve arguments after `--`, eg: `-- npm test` results in `{ '--': ['npm', 'test'] }`
 - Separate flags and input, eg: `./bin foo -w` results in `{ input: ['foo'], flags: { w: true } }`
 
