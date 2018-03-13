@@ -1,6 +1,6 @@
 {
   "name": "minimost",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Like minimist but flags are converted to camelCase",
   "repository": {
     "url": "egoist/minimost",
