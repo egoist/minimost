@@ -1,9 +1,10 @@
 const minimost = require('../')
 
 test('main', () => {
-  expect(minimost(['--foo-bar', 'foo'])).toEqual({
+  expect(minimost(['--foo-bar', 'foo', '--a-bc-de'])).toEqual({
     input: [],
     flags: {
+      aBcDe: true,
       fooBar: 'foo',
       '--': []
     }

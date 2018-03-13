@@ -2,7 +2,7 @@
 const minimist = require('minimist')
 
 const kebab2camel = input => {
-  return input.replace(/([a-z])-([a-z])/, (_, p1, p2) => {
+  return input.replace(/([a-z])-([a-z])/g, (_, p1, p2) => {
     return p1 + p2.toUpperCase()
   })
 }
