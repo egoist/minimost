@@ -6,17 +6,18 @@
     "url": "egoist/minimost",
     "type": "git"
   },
-  "main": "index.js",
+  "main": "dist/minimost.cjs.js",
   "files": [
-    "index.js"
+    "dist"
   ],
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "test:cov": "jest --coverage && npm run lint",
-    "test": "jest && npm run lint",
-    "lint": "xo"
+    "test:cov": "jest --coverage",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "build": "bili"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
@@ -24,16 +25,14 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/minimist": "^1.2.0",
+    "bili": "^3.0.15",
     "eslint-config-rem": "^3.0.0",
-    "jest-cli": "^18.1.0",
-    "xo": "^0.17.1"
-  },
-  "xo": {
-    "extends": "rem",
-    "esnext": true,
-    "envs": [
-      "jest"
-    ]
+    "jest": "^22.4.3",
+    "rollup-plugin-typescript2": "^0.13.0",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1"
   },
   "dependencies": {
     "minimist": "^1.2.0"

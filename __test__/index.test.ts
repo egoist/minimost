@@ -1,4 +1,4 @@
-const minimost = require('../')
+import minimost from '../src'
 
 test('main', () => {
   expect(minimost(['--foo-bar', 'foo', '--a-bc-de'])).toEqual({
