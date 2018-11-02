@@ -22,3 +22,5 @@ export default function (argv: string[], options?: Opts) {
 
   return { input, flags }
 }
+
+export { Opts }
