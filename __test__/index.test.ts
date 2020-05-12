@@ -20,3 +20,30 @@ test('exclude', () => {
     }
   })
 })
+
+test('unknown', () => {
+  const options = {
+    boolean: ['foo'],
+    unknown: jest.fn()
+  }
+  expect(minimost(['--foo', 'bar'], options)).toEqual({
+    input: ['bar'],
+    flags: {
+      foo: true,
+      '--': []
+    }
+  })
+  expect(options.unknown).not.toHaveBeenCalled()
+
+  options.unknown.mockClear()
+  minimost(['--foo', '--bar'], options)
+  expect(options.unknown).toHaveBeenCalledWith('--bar')
+
+  options.unknown.mockClear()
+  minimost(['--foo', '-b'], options)
+  expect(options.unknown).toHaveBeenCalledWith('-b')
+
+  options.unknown.mockClear()
+  minimost(['--foo', '-'], options)
+  expect(options.unknown).not.toHaveBeenCalled()
+})

@@ -7,10 +7,17 @@ const kebab2camel = (input: string) => {
 }
 
 export default function (argv: string[], options?: Opts) {
-  const parsed = minimist(argv, Object.assign({
-    '--': true
-  }, options))
+  options = Object.assign({ '--': true }, options)
 
+  const unknown = options.unknown
+  if (typeof unknown === 'function') {
+    options.unknown = function (input) {
+      if (input === '-' || !input.startsWith('-')) return
+      return unknown.call(this, input)
+    }
+  }
+
+  const parsed = minimist(argv, options)
   const input = parsed._
   delete parsed._
 
